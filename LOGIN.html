@@ -1,0 +1,31 @@
+<link rel="icon" type="image/x-icon" href="download.jpg">
+<script>
+function Login(e) {
+    // 1. Prevent the form from submitting normally (reloading the page)
+    e.preventDefault();
+
+    var uname = document.getElementById("uname").value;
+    var pwd = document.getElementById("pwd").value;
+
+    // 2. Secure comparison logic (usually handled on server side)
+    if (uname === "kamil" && pwd === "kamil") {
+        alert("Login Successful");
+        // 3. Proper JavaScript redirection
+        window.location.href = "file:///C:/Users/acer/Desktop/Index.html";
+    } else {
+        alert("Invalid Username or Password");
+    }
+}
+</script>
+<center>
+    <body>
+        <style>
+            body {
+                background-image: url(images.jpg);
+            }
+        </style>
+<form onsubmit="Login(event)"><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <input type="text" id="uname" placeholder="Username" required><br><br><br>
+    <input type="password" id="pwd" placeholder="Password" required><br><br><br>
+    <button type="submit">Login</button><br><br><br>
+</form>
